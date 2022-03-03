@@ -1,4 +1,4 @@
-import db from '../helper/database.js'
+const db = require('../helper/database.js')
 
 const getPeople = async(request, response) => {
     const { familyCardNumber } = request.params
@@ -40,4 +40,6 @@ const getPeople = async(request, response) => {
     })
 }
 
-export { getPeople }
+module.exports = {
+    getPeople
+}

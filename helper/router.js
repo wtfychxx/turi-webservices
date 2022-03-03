@@ -1,13 +1,13 @@
-import express from 'express'
+const express = require('express')
 const router = express.Router()
 
-import { getPeople } from '../controller/people.js'
+const peopleController = require('../controller/people')
 
 router.use(function hitlog(request, response, next) {
     console.log('Time', Date.now())
     next()
 })
 
-router.get('/getPerson/:familyCardNumber', getPeople)
+router.get('/getPerson/:familyCardNumber', peopleController.getPeople)
 
-export default router
+module.exports = router

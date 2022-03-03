@@ -1,14 +1,14 @@
 // import express
-import express from 'express'
-// import bodyparser
-import bodyParser from 'body-parser'
-// import router
-import router from './helper/router.js'
-// import cors
-import cors from 'cors'
+const express = require('express')
+    // import bodyparser
+const bodyParser = require('body-parser')
+    // import router
+const router = require('./helper/router.js')
+    // import cors
+const cors = require('cors')
 
 // .env initizliation
-import dotenv from 'dotenv'
+const dotenv = require('dotenv')
 dotenv.config()
 
 // port initializtion
